@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Philosophy from '../components/Philosophy';
+import SignatureTreatment from '../components/SignatureTreatment';
+import Stats from '../components/Stats';
+import CTA from '../components/CTA';
+import Footer from '../components/Footer';
+import MobileFloatingBtn from '../components/MobileFloatingBtn';
+---
+
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LUMIÈRE SPA - 頂級美胸按摩品牌。專為亞洲女性量身打造的極致美胸工藝，透過深層經絡與法式芳療，重塑自信曲線。"
+    />
+    <title>LUMIÈRE SPA | 頂級美胸按摩</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div
+      class="min-h-screen bg-[#F2F0EB] p-0 md:p-8 font-ui text-neutral-800 flex items-center justify-center"
+    >
+      <!-- Main Card Container -->
+      <div
+        class="w-full max-w-[1400px] bg-[#FAFAFA] md:rounded-[40px] shadow-none md:shadow-2xl overflow-hidden relative mx-auto transition-all duration-500"
+      >
+        <!-- Navigation -->
+        <Navbar client:load />
+
+        <!-- Hero Section -->
+        <Hero client:load />
+
+        <!-- Content Sections -->
+        <div
+          class="bg-[#FAFAFA] relative pt-20 md:pt-32 pb-20 px-6 md:px-16 overflow-hidden"
+        >
+          <!-- Decorative Background Text -->
+          <div
+            class="absolute top-20 right-0 text-[100px] md:text-[200px] leading-none font-heading text-neutral-100 opacity-60 pointer-events-none select-none z-0"
+          >
+            Luxe
+          </div>
+
+          <div class="container mx-auto relative z-10">
+            <!-- Philosophy Section -->
+            <Philosophy client:visible />
+
+            <!-- Signature Treatment Section -->
+            <SignatureTreatment client:visible />
+
+            <!-- Stats Section -->
+            <Stats client:visible />
+
+            <!-- CTA Section -->
+            <CTA client:visible />
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <Footer />
+      </div>
+    </div>
+
+    <!-- Mobile Floating Button -->
+    <MobileFloatingBtn client:load />
+  </body>
+</html>
